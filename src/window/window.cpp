@@ -29,7 +29,6 @@ void update_window_size(WINDOW *win)
   getmaxyx(win, w_rows, w_cols);
   w_width = w_cols / 2;
   w_height = w_rows;
-  printf("TOP SIZE IS %d ", w_width);
 
   if (distance_map)
     free(distance_map);

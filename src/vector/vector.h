@@ -2,37 +2,6 @@
 
 #include "../constants.h"
 
-class vec2
-{
-public:
-  f64 x, y;
-  vec2();
-  vec2(f64 xy);
-  vec2(f64 x, f64 y);
-
-  vec2 operator+(const vec2& other);
-  vec2 operator-(const vec2& other);
-  vec2 operator*(const f64& s);
-  vec2 operator/(const f64& s);
-  vec2& operator+=(const vec2& other);
-  vec2& operator-=(const vec2& other);
-  vec2& operator*=(const f64& s);
-  vec2& operator/=(const f64& s);
-  f64  operator* (const vec2& other);
-
-  void normalize();
-  vec2 normalized();
-
-  void rotate(f64 ang);
-  vec2 rotated(f64 ang);
-};
-
-extern const vec2 VEC_ZERO;
-extern const vec2 VEC_X;
-extern const vec2 VEC_Y;
-extern const vec2 VEC_MX;
-extern const vec2 VEC_MY;
-
 class vec3
 {
 public:
@@ -40,7 +9,6 @@ public:
   vec3();
   vec3(f64 xyz);
   vec3(f64 x, f64 y, f64 z);
-  vec3(vec2 xy);
 
   vec3 operator+(const vec3& other);
   vec3 operator-(const vec3& other);

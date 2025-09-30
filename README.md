@@ -88,6 +88,13 @@ OPTIONS:
 
 `catmol` parses the molecular structure file to extract atomic coordinates and connectivity. It then projects the 3D coordinates onto a 2D plane (using a simple orthographic projection) and rasterizes the bonds and atoms into a grid of terminal cells. Each cell is then mapped to a colored character to create the final image.
 
+Use the vi movement keys to navigate around:
+
+* `h` and `l` rotate the molecule around the vertical axis;
+* `j` and `k` rotate it around the horizontal axis;
+* `H` and `L` go to the previous or next molecule if you opened more than one xyz file at once;
+* `q` exits the interface;
+
 ---
 
 ## License

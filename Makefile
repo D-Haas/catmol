@@ -1,10 +1,16 @@
 CXX = gcc
 
-CXXFLAGS = -W -Wall -Wextra -Wconversion -std=c++23 -Ofast -march=native -mrecip=all -ffast-math
+CXXFLAGS = -W -Wall -Wextra -std=c++23 -Ofast -march=native -mrecip=all -ffast-math
 
 LIBS = -Iinclude -Llib -lncurses -ltinfo -lm -lstdc++
 STATIC_LIBS = -static-libgcc -static-libstdc\+\+
-SOURCES = ./src/main.cpp ./src/constants.cpp ./src/vector/vector.cpp ./src/window/window.cpp ./src/xyz/xyz.cpp ./src/customization/customization.cpp
+SOURCES = ./src/main.cpp \
+					./src/constants.cpp \
+					./src/vector/vector.cpp \
+					./src/window/window.cpp \
+					./src/xyz/xyz.cpp \
+					./src/customization/customization.cpp \
+					./src/opts/opts.cpp
 
 TARGET = catmol
 

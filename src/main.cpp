@@ -9,6 +9,7 @@
 #include "./window/window.h"
 #include "./xyz/xyz.h"
 #include "./customization/customization.h"
+#include "./opts/opts.h"
 
 int setup()
 {
@@ -153,6 +154,7 @@ void create_hud()
   refresh();
 }
 
+
 int main(i32 argc, char **argv)
 {
   // Return if not enough arguments were given
@@ -162,6 +164,22 @@ int main(i32 argc, char **argv)
     return 1;
   }
 
+  // Checks if special option is listed
+  Opt opt = check_opts(argc, argv);
+  switch (opt)
+  {
+    case VERSION:
+    print_version();
+    return 0;
+
+    case HELP:
+    print_help();
+    return 0;
+
+    case NONE:
+    // Nothing happens
+    break;
+  }
 
   // Import structures from arguments
   ImportResult import_result = import_files(argc, argv);

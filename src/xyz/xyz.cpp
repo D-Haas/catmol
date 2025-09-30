@@ -150,19 +150,20 @@ void Structure::draw(WINDOW *win)
     );
   }
 
-  for (u32 i = 0; i < len; i++)
-    for (u32 j = i+1; j < len; j++)
-    {
-      double radi_sum = atomic_radi[atoms[i].atomic_number] + atomic_radi[atoms[j].atomic_number];
-      double dist = (atoms[i].pos - atoms[j].pos).mod();
-      if ((dist/size_scale) <= (radi_sum + 0.23))
+  if (radius_mode != ACCURATE)
+    for (u32 i = 0; i < len; i++)
+      for (u32 j = i+1; j < len; j++)
       {
-        draw_line(
-          win,
-          atoms[i].pos + screen_center,
-          atoms[j].pos + screen_center,
-          COLOR_WHITE
-        );
+        double radi_sum = atomic_radi[atoms[i].atomic_number] + atomic_radi[atoms[j].atomic_number];
+        double dist = (atoms[i].pos - atoms[j].pos).mod();
+        if ((dist/size_scale) <= (radi_sum + 0.23))
+        {
+          draw_line(
+            win,
+            atoms[i].pos + screen_center,
+            atoms[j].pos + screen_center,
+            COLOR_WHITE
+          );
+        }
       }
-    }
 }

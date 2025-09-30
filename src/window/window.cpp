@@ -20,7 +20,7 @@ void setup_colors()
   use_default_colors();
   for (i16 i=0; i<COLORS; i++)
   {
-    init_pair(i, i, -1);
+    init_pair(i, i, i);
   }
 }
 
@@ -56,8 +56,8 @@ void draw_pixel(WINDOW *win, int x, int y, i32 color)
   // Draw filled boxes
   // 2 boxes ~= 1 pixel
   // (Depending on your monospaced font proportions)
-  waddch(win, ACS_BLOCK);
-  waddch(win, ACS_BLOCK);
+  waddch(win, ' ');
+  waddch(win, ' ');
 
   // Put color to normal
   wattroff(win, COLOR_PAIR(color));

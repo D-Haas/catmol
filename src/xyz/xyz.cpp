@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <fstream>
+#include <ncurses.h>
 #include "./xyz.h"
 #include "../window/window.h"
 #include "../customization/customization.h"
@@ -91,7 +92,9 @@ void Structure::scale(WINDOW *win)
         max_dist = temp_dist;
     }
 
-  double min_dimension = min((double)w_width, (double)w_height);
+  double width, height;
+  getmaxyx(win, height, width);
+  double min_dimension = min(width, height);
 
   double ratio = min_dimension/max_dist;
   for (u32 i=0; i < len; i++)

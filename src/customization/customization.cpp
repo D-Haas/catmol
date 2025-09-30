@@ -5,6 +5,12 @@ BondingMode bonding_mode = DOTTED;
 
 void change_radius_mode()
 {
+  /*
+   * Cycle radius mode, as the name says
+   * REDUCED -> Radius are reduced so bondings can be shown
+   * SIMPLIFIED -> Radius are brought closer together = sqrt(REDUCED)
+   * ACCURATE -> Radius dimensions are accurate
+  */
   switch (radius_mode)
   {
     case REDUCED:
@@ -21,6 +27,11 @@ void change_radius_mode()
 
 void change_bonding_mode()
 {
+  /*
+   * Cycle bonding mode, as the name also says
+   * FILL -> Bondings are drawn as a filled line
+   * DOTTED -> Bondings are drawn every other pixel (as dots)
+  */
   switch (bonding_mode)
   {
     case FILL:

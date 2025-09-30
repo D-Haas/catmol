@@ -5,11 +5,17 @@
 
 `catmol` renders molecular structures directly in your terminal, using block characters to represent atoms and bonds. It's a fast, lightweight, and script-friendly tool for quick molecular visualization without leaving the command line.
 
-![Catmol demonstration](imgs/dication_benzene.png)
-![Catmol video demonstration](imgs/options_n_spinning.gif)
+![Catmol demonstration](imgs/caffeine.png)
+<p align=center> Caffeine molecule </p>
 
+![Catmol video demonstration](imgs/caffeine_rotation.gif)
+<p align=center> Caffeine molecule spinning </p>
 
-<p align=center> **Examples of Dication benzene shown in the terminal (not the global minimum)**
+![Catmol video demonstration](imgs/caffeine_radius_modes.gif)
+<p align=center> Catmol different radius modes </p>
+
+![Catmol video demonstration](imgs/caffeine_bonding_modes.gif)
+<p align=center> Catmol different bonding modes </p>
 
 ## Installation
 
@@ -93,6 +99,8 @@ Use the vi movement keys to navigate around:
 * `h` and `l` rotate the molecule around the vertical axis;
 * `j` and `k` rotate it around the horizontal axis;
 * `H` and `L` go to the previous or next molecule if you opened more than one xyz file at once;
+* `r` Alternates between the different radius modes (`Reduced`, `Simplified` and `Accurate`);
+* `b` Alternates between the different bonding modes (`Dotted` and `Fill`);
 * `q` exits the interface;
 
 ---

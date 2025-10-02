@@ -115,7 +115,7 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 ## FAQ
 
 
-**Q: The output looks garbled in my terminal.**
+**Q: The output is colorless in my terminal.**
 
 **A:** Ensure your terminal emulator has support for **xterm-256color**.
 
